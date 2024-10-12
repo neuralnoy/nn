@@ -1,0 +1,76 @@
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #d9d9d9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #d9d9d9;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #034fa1;
+}
+
+/* Make sure the font is applied to all elements within the navbar brand */
+.navbar .navbar-text {
+    font-family: 'Architype Van Der Leck', sans-serif;  /* Use the custom font */
+    font-size: 34px;                                   /* Set larger font size */
+    font-weight: 600;                                  /* Makes the text slightly bold */
+    color: #333;                                       /* Change this color to fit your theme */
+}
+
+
+/* Main content area */
+.container {
+    padding: 40px;
+}
+
+/* Override Bootstrap bg-dark class with higher specificity */
+footer {
+    background: linear-gradient(90deg, #8c52ff, #5ce1e6) !important;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: left;
+}
+
+footer h5, footer p, footer a {
+    color: #ffffff;  /* Ensures text remains visible */
+}
+
+
+footer a:hover {
+    color: #ffffff;  /* On hover, links will turn pure white */
+}
+
+
+footer .text-center p {
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    .footer-col {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+.navbar .dropdown-toggle img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5rem; /* Add space between the icon and text, if any */
+}
