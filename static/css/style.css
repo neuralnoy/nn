@@ -7,10 +7,17 @@ body {
 }
 
 /* Navbar */
+.navbar {
+    font-family: 'Arial', sans-serif;
+}
 .navbar-brand {
     font-weight: bold;
     font-size: 1.5rem;
     color: #d9d9d9;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 20px; /* Adjust the spacing as needed */
 }
 
 .navbar-nav .nav-link {
@@ -19,12 +26,12 @@ body {
 }
 
 .navbar-nav .nav-link:hover {
-    color: #034fa1;
+    color: #006dff;
 }
 
 /* Make sure the font is applied to all elements within the navbar brand */
 .navbar .navbar-text {
-    font-family: 'Architype Van Der Leck', sans-serif;  /* Use the custom font */
+    font-family: 'Arial', sans-serif;  /* Use the custom font */
     font-size: 34px;                                   /* Set larger font size */
     font-weight: 600;                                  /* Makes the text slightly bold */
     color: #333;                                       /* Change this color to fit your theme */
@@ -38,7 +45,7 @@ body {
 
 /* Override Bootstrap bg-dark class with higher specificity */
 footer {
-    background: linear-gradient(90deg, #8c52ff, #5ce1e6) !important;
+    background: linear-gradient(180deg, #006dff, #54aef3) !important;
     color: #ffffff;
     padding: 20px 0;
     text-align: left;
@@ -73,4 +80,123 @@ footer .text-center p {
     display: inline-block;
     vertical-align: middle;
     margin-right: 0.5rem; /* Add space between the icon and text, if any */
+}
+
+.rounded-logo {
+    border-radius: 15px; /* Adjust this value for more or less rounding */
+    /* Optionally, add a border or box shadow */
+    /* border: 2px solid #007bff; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+/* Custom class for the CTA section */
+.cta-custom-bg {
+    background-color: #006dff; /* Replace with your desired color */
+    color: #fff; /* Ensure text remains readable */
+}
+
+.hero-section {
+    height: 100vh;
+    background-image: url('/static/images/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 700px;
+    z-index: 2;
+}
+
+.hero-section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    z-index: 1;
+}
+
+.btn-primary {
+    background-color: #006dff;
+    border-color: #006dff;
+}
+
+.btn-primary:hover {
+    background-color: #006dff;
+    border-color: #006dff;
+}
+
+.services {
+    background-color: #f8f9fa;
+}
+
+.service-box {
+    background-color: white;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+}
+
+.service-box i {
+    color: #006dff;
+}
+
+.blockquote {
+    font-size: 1.25rem;
+    color: #333;
+}
+
+/* Testimonials Section Styles */
+.testimonials {
+    background-color: #f8f9fa; /* Light background for contrast */
+    padding: 50px 0; /* Top and bottom padding */
+}
+
+.testimonial-box {
+    background-color: #ffffff; /* White background for testimonials */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s; /* Smooth scaling on hover */
+}
+
+.testimonial-box:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.carousel-inner {
+    text-align: center; /* Center align text within carousel */
+}
+
+.carousel-item {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #006dff; /* Change arrow colors to match theme */
+    border-radius: 50%; /* Round the arrow icons */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Adjust the width of the control buttons */
+}
+
+/* Optional - Centering the heading */
+.testimonials h2 {
+    font-size: 2rem; /* Increase heading size */
+    color: #333; /* Darker text color for visibility */
+}
+
+/* Ensure the blockquote looks good */
+.blockquote {
+    font-style: italic; /* Italicize testimonial text */
+    color: #000000; /* Dark gray for readability */
 }

@@ -1,8 +1,98 @@
 {% extends "base.html" %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Neural Noy - AI Solutions for Finance{% endblock %}
 
 {% block content %}
-    <h1>Home</h1>
-    <p>This is the home page.</p>
+<!-- Hero Section -->
+<section class="hero-section text-center text-light d-flex justify-content-center align-items-center">
+    <div class="hero-content">
+        <h1 class="display-4 fw-bold">Transforming Finance with AI-Driven Solutions</h1>
+        <p class="lead mt-3">Empowering financial institutions with intelligent tools for risk management, simulations, and insights.</p>
+        <a href="{% url 'contact' %}" class="btn btn-lg mt-4" style="background-color: #006dff; color: white;">Get Started</a>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Our AI-Driven Solutions</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="service-box p-4 shadow-sm">
+                    <i class="fas fa-shield-alt fa-3x mb-3" style="color: #006dff;"></i>
+                    <h4>Risk Assessment</h4>
+                    <p>Evaluate and manage financial risks with AI-powered precision models.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-box p-4 shadow-sm">
+                    <i class="fas fa-chart-line fa-3x mb-3" style="color: #006dff;"></i>
+                    <h4>Simulations & Forecasting</h4>
+                    <p>Perform predictive simulations and scenario analysis for strategic planning.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-box p-4 shadow-sm">
+                    <i class="fas fa-brain fa-3x mb-3" style="color: #006dff;"></i>
+                    <h4>Insight Generation</h4>
+                    <p>Generate actionable insights from complex financial data.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="mb-4">What Our Clients Say</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- First Testimonial -->
+                <div class="carousel-item active">
+                    <div class="testimonial-box p-4 mx-auto shadow-sm">
+                        <blockquote class="blockquote">
+                            <p class="mb-0">"Neural Noy's AI tools have revolutionized our risk management process."</p>
+                        </blockquote>
+                    </div>
+                </div>
+                <!-- Second Testimonial -->
+                <div class="carousel-item">
+                    <div class="testimonial-box p-4 mx-auto shadow-sm">
+                        <blockquote class="blockquote">
+                            <p class="mb-0">"The AI simulations have given us unprecedented insights for strategic planning."</p>
+                        </blockquote>
+                    </div>
+                </div>
+                <!-- Third Testimonial -->
+                <div class="carousel-item">
+                    <div class="testimonial-box p-4 mx-auto shadow-sm">
+                        <blockquote class="blockquote">
+                            <p class="mb-0">"We have gained a competitive edge with Neural Noy's cutting-edge solutions."</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section>
+    <div class="cta-section text-center py-5 cta-custom-bg">
+        <div class="container">
+            <h2>Start Your AI Journey with Neural Noy Today!</h2>
+            <p class="lead">Contact us to discuss your next AI-driven project and explore how we can help you.</p>
+            <a href="{% url 'contact' %}" class="btn btn-light btn-lg mt-3">Get in Touch</a>
+        </div>
+    </div>
+</section>
 {% endblock %}

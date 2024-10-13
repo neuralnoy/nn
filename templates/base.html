@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Innovative AI solutions for financial institutions. Empower your business with our cutting-edge software.">
-    <title>{% block title %}AI Solutions for Finance{% endblock %}</title>
+    <title>{% block title %}Neural Noy{% endblock %}</title>
 
     <!-- Load static files -->
     {% load static %}
@@ -21,26 +21,29 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="{% url 'home' %}">
-                <img src="{% static 'images/logo.png' %}" alt="Neural Noy Logo" height="180">
-                <span class="navbar-text ms-2">AI Solutions for Finance</span>
-            </a>
+                <img src="{% static 'images/logo.png' %}" alt="Neural Noy Logo" height="180" class="rounded-logo">
+            
+            </a>            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <!-- Dropdown Menu -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Explore
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="{% url 'home' %}">Home</a></li>
-                            <li><a class="dropdown-item" href="{% url 'about' %}">About Us</a></li>
-                            <li><a class="dropdown-item" href="{% url 'solutions' %}">Solutions</a></li>
-                            <li><a class="dropdown-item" href="{% url 'resources' %}">Resources</a></li>
-                            <li><a class="dropdown-item" href="{% url 'contact' %}">Contact Us</a></li>
-                        </ul>
+                    <!-- Individual navigation links -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'solutions' %}">SOLUTIONS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'resources' %}">NEWS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'careers' %}">CAREERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">CONTACT</a>
                     </li>
                 </ul>
             </div>
@@ -54,13 +57,13 @@
         <!-- Page-specific content will be injected here -->
         {% endblock %}
     </div>
-
+    
     <!-- Footer -->
     <footer class="text-light mt-5 py-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h5>About Us</h5>
+                    <h5>Neural Noy</h5>
                     <p>We are a leading AI software company delivering advanced solutions for financial institutions.
                         Our innovative technologies help businesses optimize their financial operations,
                         manage risks more effectively, and make data-driven decisions.</p>
@@ -75,13 +78,18 @@
                         <li><a href="{% url 'contact' %}" class="text-light">Contact Us</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 contact-info">
                     <h5>Contact Us</h5>
-                    <p>Email: info@neuralnoy.com</p>
-                    <p>Phone: +41 76 443 2242</p>
-                    <p>Address: Badenerstrasse 727,</p>
-                    <p>CH-8048, Zurich, Switzerland </p> 
+                    <p style="margin-bottom: 3px;">
+                        Email: <a href="mailto:info@neuralnoy.com" class="text-light">info@neuralnoy.com</a>
+                    </p>
+                    <p style="margin-bottom: 3px;">
+                        Phone: <a href="tel:+41764432242" class="text-light">+41 76 443 2242</a>
+                    </p>
+                    <p style="margin-bottom: 3px;">Address: Badenerstrasse 727,</p>
+                    <p style="margin-bottom: 3px;">CH-8048, Zurich, Switzerland</p>
                 </div>
+                
             </div>
             <div class="text-center mt-3">
                 <p>&copy; 2024 Neural Noy. All rights reserved.</p>
