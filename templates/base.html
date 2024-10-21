@@ -6,9 +6,9 @@
     <meta name="description" content="Innovative AI solutions for financial institutions. Empower your business with our cutting-edge software.">
     <title>{% block title %}Neural Noy{% endblock %}</title>
 
+
     <!-- Load static files -->
     {% load static %}
-
     <!-- Link to CSS (from static folder) -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
@@ -22,14 +22,12 @@
         <div class="container">
             <a class="navbar-brand" href="{% url 'home' %}">
                 <img src="{% static 'images/logo.png' %}" alt="Neural Noy Logo" height="120" class="rounded-logo">
-            
-            </a>            
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <!-- Individual navigation links -->
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'solutions' %}">SOLUTIONS</a>
                     </li>
@@ -45,6 +43,31 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'contact' %}">CONTACT</a>
                     </li>
+    
+                    <!-- Conditional Links for Authentication -->
+                    {% if user.is_authenticated %}
+                    <!-- Dashboard Button -->
+                    <li class="nav-item">
+                        <a class="btn btn-info btn-circle" href="{% url 'dashboard' %}">DASHBOARD</a> <!-- Dashboard as a button -->
+                    </li>
+
+                    <!-- Logout Button (inside form to allow POST request) -->
+                    <li class="nav-item ms-2">
+                        <form action="{% url 'logout' %}" method="post" style="display: inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger btn-circle">Logout</button> <!-- Logout as a button -->
+                        </form>
+                    </li>
+                    {% else %}
+                    <!-- Login and Register as buttons -->
+                    <li class="nav-item">
+                        <a class="btn btn-primary btn-circle" href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-success btn-circle" href="{% url 'register' %}">Register</a>
+                    </li>
+                    {% endif %}
+
                 </ul>
             </div>
         </div>

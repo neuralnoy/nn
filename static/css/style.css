@@ -17,26 +17,17 @@ body {
 }
 
 .navbar-nav .nav-item {
-    margin-left: 20px; /* Adjust the spacing as needed */
+    margin-left: 5px; /* Adjust the spacing as needed */
 }
 
 .navbar-nav .nav-link {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #333;
 }
 
 .navbar-nav .nav-link:hover {
     color: #006dff;
 }
-
-/* Make sure the font is applied to all elements within the navbar brand */
-.navbar .navbar-text {
-    font-family: 'Arial', sans-serif;  /* Use the custom font */
-    font-size: 34px;                                   /* Set larger font size */
-    font-weight: 600;                                  /* Makes the text slightly bold */
-    color: #333;                                       /* Change this color to fit your theme */
-}
-
 
 /* Main content area */
 .container {
@@ -55,15 +46,6 @@ footer h5, footer p, footer a {
     color: #ffffff;  /* Ensures text remains visible */
 }
 
-
-footer a:hover {
-    color: #ffffff;  /* On hover, links will turn pure white */
-}
-
-
-footer .text-center p {
-    margin: 0;
-}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -115,7 +97,7 @@ footer .text-center p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
     z-index: 1;
 }
 
@@ -199,4 +181,63 @@ footer .text-center p {
 .blockquote {
     font-style: italic; /* Italicize testimonial text */
     color: #000000; /* Dark gray for readability */
+}
+
+
+
+
+/* Style for Login button */
+.nav-item a.btn-primary {
+    background-color: #006dff; /* Change to your desired color */
+    color: white; /* Change text color */
+    padding: 10px 20px; /* Add padding */
+    border-radius: 5px; /* Round corners */
+    border-color: #006dff;
+}
+
+/* Style for Register button */
+.nav-item a.btn-success {
+    background-color: #006dff; /* Change to your desired color */
+    color: white; /* Change text color */
+    padding: 10px 20px; /* Add padding */
+    border-radius: 5px; /* Round corners */
+    border-color: #006dff;
+
+}
+
+/* Style for Dashboard button */
+.nav-item a.btn-info {
+    background-color: #006dff; /* Change to your desired color */
+    color: white; /* Change text color */
+    /* padding: 10px 20px; Add padding */
+    border-radius: 5px; /* Round corners */
+    border-color: #006dff;
+}
+
+/* Hover effect for Login button */
+.nav-item a.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3;
+}
+
+/* Hover effect for Register button */
+.nav-item a.btn-success:hover {
+    background-color: #0056b3; /* Darker green on hover */
+    border-color: #0056b3;
+}
+
+/* Hover effect for Dashboard button */
+.nav-item a.btn-info:hover {
+    background-color: #0056b3; /* Darker green on hover */
+    border-color: #0056b3;
+}
+
+/* Optional: Make the buttons bigger */
+.nav-item a.btn {
+    font-size: 16px; /* Increase font size */
+}
+
+/* Add margin for spacing */
+.nav-item {
+    margin-right: 10px; /* Space between buttons */
 }
