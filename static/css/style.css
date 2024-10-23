@@ -185,7 +185,6 @@ footer h5, footer p, footer a {
 
 
 
-
 /* Style for Login button */
 .nav-item a.btn-primary {
     background-color: #006dff; /* Change to your desired color */
@@ -202,7 +201,6 @@ footer h5, footer p, footer a {
     padding: 10px 20px; /* Add padding */
     border-radius: 5px; /* Round corners */
     border-color: #006dff;
-
 }
 
 /* Style for Dashboard button */
@@ -240,4 +238,97 @@ footer h5, footer p, footer a {
 /* Add margin for spacing */
 .nav-item {
     margin-right: 10px; /* Space between buttons */
+}
+
+
+/* Custom styles for the NEWS page block */
+
+.article-block {
+    font-family: 'Arial', sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 18px;
+}
+
+.news-article {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    align-items: stretch; /* Ensure both sides stretch equally */
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; /* Ensures both columns are the same height */
+}
+
+.col-left {
+    flex: 1;
+    max-width: 40%;
+    margin-right: 20px;
+    display: flex; /* Make it flexible */
+    align-items: center; /* Center the image vertically if it is shorter */
+    justify-content: center;
+}
+
+.col-right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align text in the middle if shorter */
+}
+
+.paper-image {
+    width: 100%;
+    height: auto;
+    max-height: 100%; /* Ensures the image never grows beyond its container */
+    object-fit: contain; /* Keeps the aspect ratio of the image */
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.article-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.article-meta {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.article-details p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.article-details strong {
+    font-weight: bold;
+}
+
+.read-more-link {
+    color: #006dff;
+    text-decoration: none;
+}
+
+.read-more-link:hover {
+    text-decoration: underline;
 }

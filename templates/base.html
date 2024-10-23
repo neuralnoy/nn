@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- Load static files -->
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,9 +8,9 @@
     <meta name="description" content="Innovative AI solutions for financial institutions. Empower your business with our cutting-edge software.">
     <title>{% block title %}Neural Noy{% endblock %}</title>
 
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
 
-    <!-- Load static files -->
-    {% load static %}
     <!-- Link to CSS (from static folder) -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 

@@ -1,8 +1,51 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Neural Noy - News{% endblock %}
 
 {% block content %}
-    <h1>Blog</h1>
-    <p>This will be a blog / newsletter page.</p>
+    <div class="col-lg-12 text-center mb-4">
+        <h1 class="display-4">News</h1>
+        <p class="lead">Your source for the latest updates</p>
+    </div>
+
+    <!-- Main article about your SSRN paper -->
+    <div class="news-article">
+        <div class="row">
+            <!-- Left: Paper screenshot -->
+            <div class="col-left">
+                <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4582564" target="_blank">
+                    <img src="{% static 'images/paper-screenshot.png' %}" alt="SSRN Paper Screenshot" class="paper-image">
+                </a>
+            </div>
+
+            <!-- Right: Paper details -->
+            <div class="col-right">
+                <h2 class="article-title">Recent Publication: Finding the Blind Spots Before It's Too Late: A (Reverse) Stress Testing Approach for Asset Liability Management</h2>
+                <p class="article-meta">Published on SSRN | September 2023</p>
+
+                <div class="article-details">
+                    <p><strong>Abstract:</strong> The rapid increase of interest rates across global economies and the failure of Silicon Valley Bank, in large part driven by interest rate risk, have increased public and regulatory focus on diligent interest rate risk management.
+
+                        This paper introduces a new quantitative toolkit for (reverse) stress testing of Net Interest Income (NII) and Economic Value of Equity (EVE) -- the key metrics of Interest Rate Risk in the Banking Book (IRRBB) -- as required by various regulations. Our toolkit combines classic yield curve modelling and valuation tools with Machine Learning (ML)/ Artificial Intelligence (AI) clustering techniques to systematically identify blind spots in a bank’s balance sheet.
+                        
+                        We illustrate the model's use by applying it to realistic balance sheets of two hypothetical banks and draw several risk management insights and policy implications from this exercise:
+                        
+                        1. Supervisory stress scenarios for IRRBB, as defined in BCBS 368, may fail to identify blind spots;
+                        
+                        2. For banks operating in multiple currencies, it is cross currency correlations that can give rise to scenarios which adversely affect NII and EVE simultaneously;
+                        
+                        3. We identify a strong interdependency between EVE and NII suggesting that banks should set the risk appetite for these metrics jointly rather than independently;
+                        
+                        4. We outline how a macroprudential regulator could extend the proposed framework to a system-wide (reverse) stress test aimed at identifying whether the banking system as a whole is exposed to interest rate risk concentrations that could pose systemic risk.
+                        
+                        Because a safe and robust financial system is vital for a well-functioning economy and society, we aspire to make a timely contribution to ongoing academic, regulatory and practitioner debates on how to make banks more resilient when facing interest rate risk and asset liability management challenges.</p>
+
+                    <p><strong>Authors:</strong> Eric Schaanning, Colin Hardy, Francisco Nunez, Arsen Stepanyan</p>
+
+                    <p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4582564" target="_blank" class="read-more-link">Read the full paper on SSRN</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

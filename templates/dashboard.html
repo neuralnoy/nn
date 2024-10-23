@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 
+{% block title %}Neural Noy - Dashboard{% endblock %}
+
 {% block content %}
-    <h2>Welcome, {{ user.username }}!</h2>
-    <p>This will be your dashboard with different tools and options.</p>
+    <div class="col-lg-12 text-center mb-4">
+        <h1 class="display-4">Welcome, {{ user.username }}!</h1>
+        <p class="lead">This page will serve as your personal dashboard for your tools, provided we can verify you as our client. <br> If you encounter any difficulties, please contact us.</p>
+    </div>
 {% endblock %}

@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 
-{% block title %}Neural Noy - Contact Us{% endblock %}
+{% block title %}Neural Noy - Contact{% endblock %}
 
 {% block content %}
-    <div class="contact-section py-5">
-        <div class="container">
+    <div class="contact-section">
+        <div>
             <!-- First Row for Introduction Text -->
             <div class="row">
-                <div class="col-md-12">
-                    <h2>Contact Us</h2>
+                <div class="col-lg-12 text-center mb-4">
+                    <h1 class="display-4">Contact Us</h1>
                     <p class="lead">We'd love to hear from you! Reach out to us with any questions, inquiries, or to discuss how our AI solutions can transform your business.</p>
                 </div>
             </div>
@@ -37,21 +37,34 @@
                 <!-- Send Us a Message Column -->
                 <div class="col-md-6">
                     <h4>Send Us a Message</h4>
-                    <form>
+                    <form method="post" action="{% url 'contact' %}">
+                        {% csrf_token %}
+                    
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" value="{{ form.name.value|default_if_none:'' }}" required>
+                            {% if form.name.errors %}
+                                <div class="text-danger">{{ form.name.errors }}</div>
+                            {% endif %}
                         </div>
+                    
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" value="{{ form.email.value|default_if_none:'' }}" required>
+                            {% if form.email.errors %}
+                                <div class="text-danger">{{ form.email.errors }}</div>
+                            {% endif %}
                         </div>
+                    
                         <div class="mb-3">
                             <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" rows="6" placeholder="Your Message" required></textarea>
+                            <textarea class="form-control" id="message" name="message" rows="6" placeholder="Your Message" required>{{ form.message.value|default_if_none:'' }}</textarea>
+                            {% if form.message.errors %}
+                                <div class="text-danger">{{ form.message.errors }}</div>
+                            {% endif %}
                         </div>
+                    
                         <button type="submit" class="btn" style="background-color: #006dff; color: white; border: none;">Send Message</button>
-
                     </form>
                 </div>
             </div>
