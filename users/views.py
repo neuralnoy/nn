@@ -1,5 +1,4 @@
 from django.views.generic import TemplateView
-from django.core.mail import send_mail
 from django.contrib import messages
 from django.shortcuts import redirect, render
 from django.contrib.auth import login
