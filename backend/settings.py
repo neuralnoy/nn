@@ -49,6 +49,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    # My middleware
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # Django middleware
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -138,3 +141,5 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 LOGIN_REDIRECT_URL = '/dashboard/'
 # This ensures the redirect works correctly after logout
 LOGOUT_REDIRECT_URL = '/'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
