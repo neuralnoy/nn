@@ -26,8 +26,8 @@ SECRET_KEY = "django-insecure-red&5x=jvqutqt5r+mdnibjr#0d3f7obvu7=p%+!y%q&ng*0^z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["3.95.195.103",
-                 "ec2-3-95-195-103.compute-1.amazonaws.com",
+ALLOWED_HOSTS = ["54.146.241.248",
+                 "ec2-54-146-241-248.compute-1.amazonaws.com",
                  "neuralnoy.com",
                  "neuralnoy.ch",
                  "www.neuralnoy.com",
@@ -128,7 +128,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATICFILES_DIRS = []
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
