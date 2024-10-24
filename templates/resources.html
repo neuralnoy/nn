@@ -9,6 +9,49 @@
         <p class="lead">Your source for the latest updates</p>
     </div>
 
+
+
+    <!-- Main article about your INEX paper -->
+    <div class="news-article">
+        <div class="row">
+            <!-- Left: Paper screenshot -->
+            <div class="col-left">
+                <a href="https://www.inet.ox.ac.uk/publications/no-2024-06-forecasting-macroeconomic-dynamics-using-a-calibrated-data-driven-agent-based-model" target="_blank">
+                    <img src="{% static 'images/paper-screenshot-1.png' %}" alt="SSRN Paper Screenshot" class="paper-image">
+                </a>
+            </div>
+
+            <!-- Right: Paper details -->
+            <div class="col-right">
+                <h2 class="article-title">Forecasting Macroeconomic Dynamics using a Calibrated Data-Driven Agent-based Model</h2>
+                <p class="article-meta">INET Oxford Working Paper Series - Working Paper No.
+                    2024-06 | September 2024</p>
+                <p class="article-meta">Neural Noy does not hold any intellectual property rights or ownership over this scientific paper.</p>
+
+                <div class="article-details">
+                    <p><strong>Abstract:</strong>In the last few years, economic agent-based models have made the transition from qualitative
+                        models calibrated to match stylised facts to quantitative models for time series forecasting, and in some
+                        cases, their predictions have performed as well or better than those of standard models (see, e.g. Poledna
+                        et al. (2023a); Hommes et al. (2022); Pichler et al. (2022)). Here, we build on the model of Poledna et al.,
+                        adding several new features such as housing markets, realistic synthetic populations of individuals with
+                        income, wealth and consumption heterogeneity, enhanced behavioural rules and market mechanisms, and
+                        an enhanced credit market. We calibrate our model for all 38 OECD member countries using state-of-the-
+                        art approximate Bayesian inference methods and test it by making out-of-sample forecasts. It outperforms
+                        both the Poledna and AR(1) time series models by a highly statistically significant margin. Our model is
+                        built within a platform we have developed, making it easy to build, run, and evaluate alternative models,
+                        which we hope will encourage future work in this area.</p>
+
+                    <p><strong>Authors:</strong> Samuel Wiese, Jagoda Kaszowska-Mojsa, Joel Dyer, Jose Moran, Marco Pangallo, François Lafond, John Muellbauer, Anisoara Calinescu, J. Doyne Farmer</p>
+
+                    <p><a href="https://www.inet.ox.ac.uk/publications/no-2024-06-forecasting-macroeconomic-dynamics-using-a-calibrated-data-driven-agent-based-model" target="_blank" class="read-more-link">Read the full paper on INET Oxford Working Paper Series</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <!-- Main article about your SSRN paper -->
     <div class="news-article">
         <div class="row">
@@ -21,7 +64,7 @@
 
             <!-- Right: Paper details -->
             <div class="col-right">
-                <h2 class="article-title">Recent Groundbreaking Publication: Finding the Blind Spots Before It's Too Late: A (Reverse) Stress Testing Approach for Asset Liability Management</h2>
+                <h2 class="article-title">Finding the Blind Spots Before It's Too Late: A (Reverse) Stress Testing Approach for Asset Liability Management</h2>
                 <p class="article-meta">Published on SSRN | September 2023</p>
                 <p class="article-meta">Neural Noy does not hold any intellectual property rights or ownership over this scientific paper.</p>
 
@@ -49,4 +92,47 @@
             </div>
         </div>
     </div>
+
+
+
+    <!-- Main article about your SSRN paper -->
+    <div class="news-article">
+        <div class="row">
+            <!-- Left: Paper screenshot -->
+            <div class="col-left">
+                <a href="https://arxiv.org/abs/2404.19756" target="_blank">
+                    <img src="{% static 'images/paper-screenshot-2.png' %}" alt="SSRN Paper Screenshot" class="paper-image">
+                </a>
+            </div>
+
+            <!-- Right: Paper details -->
+            <div class="col-right">
+                <h2 class="article-title">KAN: Kolmogorov-Arnold Networks</h2>
+                <p class="article-meta">Published on arXiv | Jun 2024</p>
+                <p class="article-meta">Neural Noy does not hold any intellectual property rights or ownership over this scientific paper.</p>
+
+                <div class="article-details">
+                    <p><strong>Abstract:</strong> Inspired by the Kolmogorov-Arnold representation theorem, we propose Kolmogorov-
+                        Arnold Networks (KANs) as promising alternatives to Multi-Layer Perceptrons (MLPs).
+                        While MLPs have fixed activation functions on nodes (“neurons”), KANs have learnable
+                        activation functions on edges (“weights”). KANs have no linear weights at all - every
+                        weight parameter is replaced by a univariate function parametrized as a spline. We show
+                        that this seemingly simple change makes KANs outperform MLPs in terms of accuracy
+                        and interpretability, on small-scale AI + Science tasks. For accuracy, smaller KANs can
+                        achieve comparable or better accuracy than larger MLPs in function fitting tasks. Theoretically and empirically, KANs possess faster neural scaling laws than MLPs. For inter-
+                        pretability, KANs can be intuitively visualized and can easily interact with human users.
+                        Through two examples in mathematics and physics, KANs are shown to be useful “collaborators” helping scientists (re)discover mathematical and physical laws. In summary, KANs
+                        are promising alternatives for MLPs, opening opportunities for further improving today's
+                        deep learning models which rely heavily on MLPs.</p>
+
+                    <p><strong>Authors:</strong> Ziming Liu, Yixuan Wang, Sachin Vaidya, Fabian Ruehle, James Halverson, Marin Soljačić, Thomas Y. Hou, Max Tegmark</p>
+
+                    <p><a href="https://arxiv.org/abs/2404.19756" target="_blank" class="read-more-link">Read the full paper on SSRN</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 {% endblock %}
